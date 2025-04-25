@@ -1,0 +1,32 @@
+<div id="ticketSection" class="ticket-container mx-auto my-5 p-4 shadow rounded">
+    <div class="ticket-body text-center">
+  
+      <!-- Logo et QR côte à côte alignés verticalement -->
+      <div class="d-flex flex-column align-items-center mb-3">
+        <img src="assets/logo.png" alt="Logo" class="mb-2" style="width: 100px; height: 100px;">
+        <div #qrCodeElement>
+          <qr-code [value]="qrCodeValue" size="100" errorCorrectionLevel="M"></qr-code>
+        </div>
+      </div>
+  
+      <!-- Grand numéro de ticket -->
+      <div class="ticket-number display-1 fw-bold fancy-font mb-2">
+        {{ numeroTicket }}
+      </div>
+  
+      <!-- Date/heure -->
+      <div class="ticket-date mb-2 fancy-font fs-5">
+        {{ dateHeure }}
+      </div>
+  
+      <!-- Nombre de personnes devant -->
+      <div class="en-attente text-muted">
+        Nombre devant vous : <strong>{{ enAttente }}</strong>
+      </div>
+    </div>
+  
+    <div class="ticket-footer text-center mt-4 text-muted small">
+      © 2025 Votre Banque – Tous droits réservés.
+    </div>
+  </div>
+  

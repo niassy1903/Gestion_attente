@@ -1,0 +1,37 @@
+.ticket-container {
+    background-color: #fffbe6; /* Jaune clair doux */
+    border: 2px dashed #ffd700; /* Bordure dorée */
+    max-width: 350px;
+  }
+  
+  .ticket-header h2 {
+    color: #b8860b;
+  }
+  
+  .ticket-info div {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+  
+    #ticketSection, #ticketSection * {
+      visibility: visible;
+    }
+  
+    #ticketSection {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    qrcode, canvas, svg {
+      display: block !important;
+      visibility: visible !important;
+    }
+  }
+  

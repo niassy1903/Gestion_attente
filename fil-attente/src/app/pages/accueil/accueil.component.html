@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Gestion de File d'Attente</a>
+    </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Bienvenue dans le système de gestion</h2>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card text-center shadow mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Opérations de Caisse</h5>
+            <p class="card-text">Générez un ticket et gérez la file d'attente.</p>
+            <button class="btn btn-primary w-100" (click)="imprimerTicket()">Aller</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card text-center shadow mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Statistiques</h5>
+            <p class="card-text">Voir les données d'utilisation du système.</p>
+            <button class="btn btn-secondary w-100" disabled>Bientôt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Composant caché -->
+  <div id="ticketSection" class="d-none">
+    <app-operation-caisse #operationCaisseComponent></app-operation-caisse>
+  </div>
+  
